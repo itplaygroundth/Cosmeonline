@@ -1,0 +1,22 @@
+.panel-title-sm
+{
+    text-align: center;
+    color: inherit;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%); 
+    
+}
+.col-custom
+{
+    min-height: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width:12.666%;
+    float: left;
+    position: relative;
+}

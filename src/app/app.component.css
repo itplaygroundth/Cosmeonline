@@ -1,0 +1,18 @@
+.container {
+  width:70%;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 4rem;
+}
+
+.leftmenu-align
+{
+    margin-left:0;
+}
+.row
+{
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,59 @@
+
+
+    <div class="col-lg-9 col-sm-9">
+      
+			<div class="panel panel-default">
+			 <div class="panel-heading">
+				<!-- Split button -->
+				<div class="row">
+				<div class="col-custom">
+				<h1 class="panel-title-sm">รายชื่อลูกค้า</h1>
+				</div>
+				<div class="col-sm-2">
+					<div class="btn-group {{isopen ? 'open':''}}" >
+						<button type="button" class="btn btn-info btn-sm">คำสั่ง</button>
+						<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="[(isopen)]" (click)="toggled()">
+							<span class="caret"></span>
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu" >
+							<li><a routerLink='/customers/add'>{{linktext1}}</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">นำเข้า</a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+  			</div>
+			<div class="panel-body">
+			<div class="container-fluid">
+					<p-growl [value]="msgs"></p-growl>
+					
+					<p-dataTable [value]="posts" resizableColumns="true" columnResizeMode="expand"  [rows]="20" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[20,40,60]"
+					selectionMode="single" [(selection)]="selectedCust" [contextMenu]="cm" (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)">
+						<p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+					</p-dataTable>
+					<p-contextMenu #cm [model]="items"></p-contextMenu>
+				</div>
+			</div>
+		<div class="panel-footer"><p>
+
+		</p>
+		</div>
+		</div>
+
+    </div>
+
+ 
+       
+		
+ 
+	
+			
+		
+
+
+  
+
+
+

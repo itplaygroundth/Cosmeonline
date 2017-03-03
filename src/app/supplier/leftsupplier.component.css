@@ -1,0 +1,25 @@
+/*.panel-default{
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border:0px;
+    -webkit-box-shadow: 0 ;
+     box-shadow: 0 ;
+     
+}
+
+.panel-default .panel-heading{
+    border: 1px solid #dddddd;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+     background-color: #f6e0fa
+}
+.panel-default .panel-body
+{
+     border: 0px solid #dddddd;
+     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+     background-color: #ffffff
+}*/
+button:focus {outline:0 !important;}
