@@ -82,15 +82,25 @@ app.put('/supplier',supplier);
 app.delete('/supplier',supplier);
 
 app.use('/authenticate',authen);
-app.post('/authenticate',authen);
+app.post('/authen',authen);
 
 
 app.use('/users',users);
+app.get('/users',users);
+
 
 // var users = require('./routes/users');
 // app.use('/users/:userid',users);
 // app.use('/users',users);
 // app.post('/adduser',users);
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8082');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,x-access-token');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'dist/index.html'));
 });
