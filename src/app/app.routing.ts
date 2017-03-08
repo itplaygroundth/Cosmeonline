@@ -21,6 +21,7 @@ import {AuthenGuard} from './_guards/index';
 
 const appRoutes:Routes=[
     {path:'',component:DashboardComponent,canActivate:[AuthenGuard],pathMatch:'full'},
+    {path:'dashboard',component:DashboardComponent,canActivate:[AuthenGuard]},
     {path:'customers',component:CustomersComponent,canActivate:[AuthenGuard],
           children:[
               //{path:'',component:CustomersComponent},

@@ -31,7 +31,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {LoginComponent} from './login/login.component';
 import {AlertComponent} from './_directives/alert.component';
 import {AuthenGuard} from './_guards/index';
-import { AlertService, AuthenticationService, UserService,SharedService,CustomersService } from './_services/index';
+import { AlertService, AuthenService, UserService,SharedService,CustomersService } from './_services/index';
+
+/// import NgModule
 
 
 
@@ -55,7 +57,7 @@ import { AlertService, AuthenticationService, UserService,SharedService,Customer
     ConfirmDialogModule,
     DataTableModule,SharedModule,GrowlModule,ContextMenuModule,DialogModule
   ],
-  providers: [AuthenGuard,AuthenticationService,AlertService,CustomersService,SupplierService,SharedService,ConfirmationService],
+  providers: [AuthenGuard,AuthenService,AlertService,CustomersService,SupplierService,SharedService,ConfirmationService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
